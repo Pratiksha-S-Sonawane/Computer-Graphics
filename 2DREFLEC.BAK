@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#include<graphics.h>
+
+void main()
+{
+ int gd=DETECT,gm,x1,y1,x2,y2,ch,midx,midy;
+ clrscr();
+ initgraph(&gd,&gm,"..//BGI");
+ printf("\nEnter x1,y1");
+ scanf("%d%d",&x1,&y1);
+ printf("\nEnter x2,y2");
+ scanf("%d%d",&x2,&y2);
+ printf("Enter 1 : reflection at x 2: reflection at y 3:origin");
+ scanf("%d",&ch);
+ rectangle(x1,y1,x2,y2);
+ midx=floor(getmaxx()/2);
+ midy=floor(getmaxy()/2);
+ switch(ch)
+ {
+  case 1:
+  x1=x1;
+  y1=-y1;
+  x2=x2;
+  y2=-y2;
+  setcolor(GREEN);
+  rectangle(x1+midx,y1+midy,x2+midx,y2+midy);
+  break;
+  case 2:
+  x1=-x1;
+  y1=y1;
+  x2=-x2;
+  y2=y2;
+  setcolor(GREEN);
+  rectangle(midx+x1,midy+y1,midx+x2,midy+y2);
+  break;
+  case 3:
+  x1=-x1;
+  y1=-y1;
+  x2=-x2;
+  y2=-y2;
+  setcolor(GREEN);
+  rectangle(midx+x1,midy+y1,midx+x2,midy+y2);
+  break;
+  default:
+  printf("Wrong Choice");
+ }
+ getch();
+ }
