@@ -9,7 +9,7 @@ void main()
  clrscr();
  initgraph(&gd,&gm,"..//BGI");
  rectangle(50,50,200,200);
- flood(55,55,5,15);
+ flood(55,55,5,0);
 
  getch();
 }
