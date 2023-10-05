@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include <iostream.h>
 #include <conio.h>
-#include <cmath>
-
+#include <cmath.h>
+using namespace std;
 typedef struct {
     float x;
     float y;
@@ -10,6 +10,7 @@ typedef struct {
 Point points;
 float temp = 0;
 void showPoint(){
+
     cout<<"("<<points.x<<","<<points.y<<","<<points.z<<")"<<endl;
 }
 void translate(float tx, float ty, float tz){
@@ -66,33 +67,33 @@ int main()
     cout<<"5. Scale"<<endl;
     cin>>choose;
     switch(choose){
-        case 1:
-            cout<<"Enter the value of tx, ty and tz: ";
-            cin>>tx>>ty>>tz;
-            translate(tx, ty, tz);
-            break;
-        case 2:
-            cout<<"Enter the angle: ";
-            cin>>angle;
-            rotatex(angle);
-            break;
-        case 3:
-            cout<<"Enter the angle: ";
-            cin>>angle;
-            rotatey(angle);
-            break;
-        case 4:
-            cout<<"Enter the angle: ";
-            cin>>angle;
-            rotatez(angle);
-            break;
-        case 5:
-            cout<<"Enter the value of sf, xf, yf and zf: ";
-            cin>>sf>>xf>>yf>>zf;
-            scale(sf, xf, yf, zf);
-            break;
-        default:
-            break;
+	case 1:
+	    cout<<"Enter the value of tx, ty and tz: ";
+	    cin>>tx>>ty>>tz;
+	    translate(tx, ty, tz);
+	    break;
+	case 2:
+	    cout<<"Enter the angle: ";
+	    cin>>angle;
+	    rotatex(angle);
+	    break;
+	case 3:
+	    cout<<"Enter the angle: ";
+	    cin>>angle;
+	    rotatey(angle);
+	    break;
+	case 4:
+	    cout<<"Enter the angle: ";
+	    cin>>angle;
+	    rotatez(angle);
+	    break;
+	case 5:
+	    cout<<"Enter the value of sf, xf, yf and zf: ";
+	    cin>>sf>>xf>>yf>>zf;
+	    scale(sf, xf, yf, zf);
+	    break;
+	default:
+	    break;
     }
     return 0;
 }
